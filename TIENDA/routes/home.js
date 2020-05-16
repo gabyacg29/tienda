@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var homeCtrl = require('../controllers/homeControllers');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-});
-
+router.get('/', homeCtrl.inicio);
+router.get('/home', homeCtrl.principal);
 module.exports = router;
